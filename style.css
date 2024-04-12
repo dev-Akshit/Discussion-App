@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-pane {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+.right-pane {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.question-form {
+    margin-bottom: 20px;
+}
+
+.question-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.question-form label,
+.question-form textarea,
+.question-form input[type="text"] {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.question-form textarea {
+    height: 100px;
+}
+
+.question-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.question-form button:hover {
+    background-color: #0056b3;
+}
+
+.question-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.question-list li {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+.question-list li:hover {
+    background-color: #f5f5f5;
+}
+
+.search-box {
+    margin-top: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.responses-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.response-item {
+    margin-bottom: 10px;
+}
+
+.resolve-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: #fff;
+    cursor: pointer;
+}
+
+.resolve-button:hover {
+    background-color: #bd2130;
+}

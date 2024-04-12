@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion App</title>
+    <link rel="stylesheet" href="discussion.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-pane">
+            <div class="question-list"></div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search questions...">
+            </div>
+        </div>
+        <div class="right-pane">
+            <div class="question-form">
+                <h2>New Question</h2>
+                <form id="questionForm">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" required>
+                    <label for="question">Question:</label>
+                    <textarea id="question" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="discussion.js"></script>
+</body>
+</html>
