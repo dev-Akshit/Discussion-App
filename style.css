@@ -1,27 +1,26 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
     display: flex;
-    width: 800px;
-    height: 500px;
-    border: 1px solid #ccc;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .left-pane {
     flex: 1;
     padding: 20px;
-    border-right: 1px solid #ccc;
     overflow-y: auto;
 }
 
@@ -31,6 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
 }
 
 .question-form {
@@ -49,10 +49,11 @@ body {
     display: block;
     margin-bottom: 10px;
     width: 100%;
-    padding: 8px;
+    padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .question-form textarea {
@@ -67,6 +68,8 @@ body {
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .question-form button:hover {
@@ -81,7 +84,7 @@ body {
 
 .question-list li {
     cursor: pointer;
-    padding: 10px;
+    padding: 15px;
     border-bottom: 1px solid #eee;
     transition: background-color 0.3s ease;
 }
@@ -96,32 +99,103 @@ body {
 
 #searchInput {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .responses-list {
     list-style-type: none;
     padding: 0;
     margin-top: 20px;
+    max-height: 300px; /* Adjust the max-height to control the scroll area */
+    overflow-y: auto; /* Enables scrolling */
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 .response-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    color: #333;
+}
+
+.response-item strong {
+    color: #007bff;
+}
+
+#responseForm {
+    margin-top: 20px;
+}
+
+#responseForm label,
+#responseForm textarea,
+#responseForm input[type="text"] {
+    display: block;
     margin-bottom: 10px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#responseForm button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#responseForm button:hover {
+    background-color: #218838;
 }
 
 .resolve-button {
-    padding: 8px 16px;
+    margin-top: 20px;
+    padding: 10px 20px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     background-color: #dc3545;
     color: #fff;
     cursor: pointer;
+    align-self: flex-end;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .resolve-button:hover {
-    background-color: #bd2130;
+    background-color: #c82333;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    align-self: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
 }

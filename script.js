@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button type="submit">Submit Response</button>
             </form>
             <button class="resolve-button">Resolve</button>
+            <button class="back-button">Back to Questions</button>
         `;
 
         const responseForm = document.getElementById("responseForm");
@@ -83,6 +84,23 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         });
 
+        const backButton = document.querySelector(".back-button");
+        backButton.addEventListener("click", () => {
+            renderQuestionList();
+            rightPane.innerHTML = `
+                <div class="question-form">
+                    <h2>New Question</h2>
+                    <form id="questionForm">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" required>
+                        <label for="question">Question:</label>
+                        <textarea id="question" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            `;
+        });
+
         renderResponses(question.responses);
     }
 
@@ -92,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
         responsesList.innerHTML = "";
         responses.forEach((response) => {
             const listItem = document.createElement("li");
+            listItem.className = "response-item";
             listItem.innerHTML = `<strong>${response.name}:</strong> ${response.comment}`;
             responsesList.appendChild(listItem);
         });
